@@ -9,7 +9,12 @@ import { useState, useEffect, useContext, createContext, useRef, useCallback } f
 
 // ── Inline Tailwind config via CDN is assumed. For local dev add:
 // tailwind.config.js extend with these custom colors.
-
+import AC_window from "./AC_window.jpeg";
+import Double_bed from "./Double_bed.jpeg";
+import Extra_single_bed from "./Extra_single_bed.jpeg";
+import complete_room from "./complete_room.jpeg";
+import logo from "./logo.jpeg";
+import washroom from "./washroom.jpeg";
 // ── CONTEXT ──────────────────────────────────────────────────
 const ThemeContext = createContext();
 const BookingContext = createContext();
@@ -29,7 +34,7 @@ const ROOMS = [
     id: 1,
     name: "Cozy Double Room",
     price: 2500,
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80",
+    image: Double_bed,
     description: "A warm, sunlit double room with handcrafted furnishings and garden glimpses.",
     amenities: ["AC", "Private Bathroom", "Free WiFi", "Clean Linen", "Flat-Screen TV"],
     capacity: 2,
@@ -39,7 +44,7 @@ const ROOMS = [
     id: 2,
     name: "Family Suite",
     price: 4200,
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80",
+    image: complete_room,
     description: "Spacious suite perfect for families, with a sitting area and extra beds.",
     amenities: ["AC", "Private Bathroom", "Free WiFi", "Balcony", "Home-Cooked Breakfast", "Flat-Screen TV"],
     capacity: 4,
@@ -49,7 +54,7 @@ const ROOMS = [
     id: 3,
     name: "Garden View Room",
     price: 3000,
-    image: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80",
+    image: AC_window,
     description: "Wake up to lush garden views with fresh morning air and birdsong.",
     amenities: ["AC", "Private Bathroom", "Free WiFi", "Terrace", "Morning Tea"],
     capacity: 2,
@@ -59,14 +64,13 @@ const ROOMS = [
     id: 4,
     name: "Budget Single Room",
     price: 1600,
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80",
+    image: Extra_single_bed,
     description: "Clean and comfortable single room ideal for solo travelers on a budget.",
     amenities: ["Fan/AC", "Shared Bathroom", "Free WiFi", "Clean Linen"],
     capacity: 1,
     badge: "Budget Friendly",
   },
 ];
-
 const REVIEWS = [
   { id: 1, name: "Priya S.", city: "Pune", rating: 5, text: "Felt like staying at a relative's home! Clean rooms, delicious breakfast, and the host family was incredibly warm.", avatar: "PS", date: "March 2025" },
   { id: 2, name: "Rahul & Meena", city: "Mumbai", rating: 5, text: "The garden view room was breathtaking. Woke up to birds chirping. Perfect getaway from city life!", avatar: "RM", date: "February 2025" },
@@ -76,12 +80,12 @@ const REVIEWS = [
 ];
 
 const GALLERY_IMAGES = [
-  { url: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80", caption: "Lush Garden Courtyard" },
-  { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80", caption: "Cozy Double Room" },
-  { url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80", caption: "Family Suite" },
-  { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", caption: "Home-Cooked Breakfast" },
-  { url: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80", caption: "Garden View Room" },
-  { url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80", caption: "Kolhapur Landscape" },
+  { url: complete_room, caption: "Complete Room View" },
+  { url: Double_bed, caption: "Double Bed Room" },
+  { url: Extra_single_bed, caption: "Extra Single Bed" },
+  { url: AC_window, caption: "AC and Window View" },
+  { url: washroom, caption: "Washroom" },
+  { url: logo, caption: "Vrinda Vas Logo" },
 ];
 
 const AMENITIES = [
